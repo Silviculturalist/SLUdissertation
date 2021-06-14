@@ -1,0 +1,5 @@
+bookdown::pdf_book:
+  includes:
+  latex_engine: xelatex
+  citation_package: natbib
+  keep_tex: yes
