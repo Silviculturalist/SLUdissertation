@@ -13,10 +13,11 @@
 \makeatother
 \subtitle{From the heights of inner Norrland to the Westrobothnian coast}
 \author{Carl Vigren}
-\date{2021-06-14}
+\date{2021-09-04}
 
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
+\usepackage{mathptmx}
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
@@ -132,6 +133,7 @@
 \fi
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
+\usepackage[justification=raggedright,labelfont=bf,singlelinecheck=false]{caption} %caption alignment left
 
 \begin{document}
 
@@ -146,20 +148,24 @@
     \end{center}
     \vspace{1cm}
     \begin{center}
-            {\Large Carl Vigren}\\
-            {\emph{\normalsize Faculty of \expandafter{Forest Sciences},\\
-                   \normalsize Department of \expandafter{Forest Ecology and Management}\\}
+            {\Large{\usefont{T1}{phv}{b}{n}Carl Vigren}}\\
+            {\large Faculty of \expandafter{Forest Sciences},\\
+             \large Department of \expandafter{Forest Ecology and Management}\\
+             {Umeå}
            }
-            {\emph{Umeå}
-                   }
+
     \end{center}
     \vfill
+    
+    \begin{center}
+      \includegraphics[width=6cm,keepaspectratio]{SLU_logotyp_internationellt_svart.eps}
+      \end{center}
+    
     \begin{center}
         {\Large{
+        \usefont{T1}{phv}{b}{n}
+        DOCTORAL THESIS \\
         \usefont{T1}{phv}{m}{n}
-        Doctoral thesis
-        \\
-        Swedish University of Agricultural Sciences \\
         Umeå \hspace{.1cm} 2021}
         \vspace{-1cm}\par}
         \end{center}
@@ -174,11 +180,13 @@
        \usefont{T1}{phv}{m}{n} Acta Universitatis agriculturae Sueciae}\\
        {\usefont{T1}{phv}{m}{n} Serial number XXX}\par}
 \vfill
+\usefont{T1}{ptm}{m}{n}
 \normalsize{\noindent {Cover photo description.}}
 \vfill
 \normalsize{\noindent ISSN {ISSN}\\
 ISBN (print version) {ISBN Print}\\ISBN(electronic version) {ISBN Electronic}\\
-\texttt{\copyright}~{2021}~{Carl Vigren}, {Umeå}\\
+\texttt{\copyright}~{2021}~{Carl Vigren}, Swedish University of Agricultural Sciences \\
+{Umeå}\\
 Print: SLU Service/Repro, Uppsala 2021
 \vspace{-1cm}}
 
@@ -200,11 +208,11 @@ Print: SLU Service/Repro, Uppsala 2021
     {\noindent abstract}
     
     \vspace{.1cm}
-    \noindent\emph{Keywords: }{keywords}
+    \noindent Keywords: {keywords}
     
     \vspace{.2cm}
-    \noindent\emph{Author's address: }{Carl Vigren, SLU, Skogsmarksgränd 17, 901 83 Umeå}\\
-    \noindent\emph{E-mail: }{\href{mailto:carl.vigren@slu.se}{\nolinkurl{carl.vigren@slu.se}}}
+    \noindent Author's address: {Carl Vigren, SLU, Skogsmarksgränd 17, 901 83 Umeå}\\
+    \noindent Department of {Forest Ecology and Management, Umeå, Sweden}
 
     \end{small}
     {\vfill}
@@ -226,11 +234,11 @@ Print: SLU Service/Repro, Uppsala 2021
     {\noindent The swedish abstract version}
     
     \vspace{.1cm}
-    \noindent\emph{Nyckelord: }{Nyckelord}
+    \noindent Nyckelord: {Nyckelord}
     
     \vspace{.2cm}
-    \noindent\emph{Författarens address: }{Carl Vigren, SLU, Skogsmarksgränd 17, 901 83 Umeå}\\
-    \noindent\emph{E-post: }{\href{mailto:carl.vigren@slu.se}{\nolinkurl{carl.vigren@slu.se}}}
+    \noindent Författarens address: {Carl Vigren, SLU, Skogsmarksgränd 17, 901 83 Umeå}\\
+    \noindent Institutionen för Skogens Ekologi och Skötsel, Umeå, Sverige
     \end{small}
     {\vfill}
     \newpage
@@ -255,7 +263,7 @@ Print: SLU Service/Repro, Uppsala 2021
             }\par \vspace{20mm}
 
   	\noindent 
-  	\usefont{T1}{phv}{m}{n} To all those who helped me.
+  	{\usefont{T1}{phv}{m}{n} To all those who helped me.}
 	\newpage
 
 	
@@ -372,7 +380,10 @@ Some \emph{significant} applications are demonstrated in this chapter.
 \section{Example one}\label{example-one}}
 
 \hypertarget{example-two}{%
-\section{Example two}\label{example-two}}
+\subsection{Example two}\label{example-two}}
+
+\hypertarget{example-three}{%
+\subsubsection{Example three}\label{example-three}}
 
 \hypertarget{final-words}{%
 \chapter{Final Words}\label{final-words}}
