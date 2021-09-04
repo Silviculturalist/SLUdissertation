@@ -452,7 +452,23 @@ $endif$
 $if(csquotes)$
 \usepackage{csquotes}
 $endif$
-\usepackage[justification=raggedright,labelfont=bf,singlelinecheck=false]{caption} %caption alignment left
+
+
+%Carl additions
+%caption alignment left
+\usepackage[justification=raggedright,labelfont=bf,singlelinecheck=false]{caption} 
+
+%toc formatting
+\usepackage{titlesec}
+
+\titleformat{\chapter}
+  {\Large\bfseries} % format
+  {}                % label
+  {0pt}             % sep
+  {\huge}           % before-code
+
+
+
 
 \begin{document}
 
@@ -582,7 +598,7 @@ Print: SLU Service/Repro, $printplace$ $submityear$
             }\par \vspace{20mm}
 
   	\noindent 
-  	\usefont{T1}{phv}{m}{n} $dedication$
+  	{\usefont{T1}{phv}{m}{n} $dedication$}
 	\newpage
 
 	
