@@ -124,6 +124,7 @@ $if(fontfamily)$
 $else$
 \usepackage{lmodern}
 $endif$
+\usepackage{mathptmx}
 $if(linestretch)$
 \usepackage{setspace}
 $endif$
@@ -451,6 +452,7 @@ $endif$
 $if(csquotes)$
 \usepackage{csquotes}
 $endif$
+\usepackage[justification=raggedright,labelfont=bf,singlelinecheck=false]{caption} %caption alignment left
 
 \begin{document}
 
@@ -465,20 +467,24 @@ $endif$
     \end{center}
     \vspace{1cm}
     \begin{center}
-            {\Large $author$}\\
-            {\emph{\normalsize Faculty of \expandafter{$faculty$},\\
-                   \normalsize Department of \expandafter{$department$}\\}
+            {\Large{\usefont{T1}{phv}{b}{n}$author$}}\\
+            {\large Faculty of \expandafter{$faculty$},\\
+             \large Department of \expandafter{$department$}\\
+             {$submitplace$}
            }
-            {\emph{$submitplace$}
-                   }
+
     \end{center}
     \vfill
+    
+    \begin{center}
+      \includegraphics[width=6cm,keepaspectratio]{SLU_logotyp_internationellt_svart.eps}
+      \end{center}
+    
     \begin{center}
         {\Large{
+        \usefont{T1}{phv}{b}{n}
+        $thesistype$ \\
         \usefont{T1}{phv}{m}{n}
-        $thesistype$
-        \\
-        Swedish University of Agricultural Sciences \\
         $submitplace$ \hspace{.1cm} $submityear$}
         \vspace{-1cm}\par}
         \end{center}
@@ -493,11 +499,13 @@ $endif$
        \usefont{T1}{phv}{m}{n} Acta Universitatis agriculturae Sueciae}\\
        {\usefont{T1}{phv}{m}{n} $serialnumber$}\par}
 \vfill
+\usefont{T1}{ptm}{m}{n}
 \normalsize{\noindent {$coverphoto$}}
 \vfill
 \normalsize{\noindent ISSN {$issn$}\\
 ISBN (print version) {$isbnPrint$}\\ISBN(electronic version) {$isbnElectronic$}\\
-\texttt{\copyright}~{$submityear$}~{$author$}, {$submitplace$}\\
+\texttt{\copyright}~{$submityear$}~{$author$}, Swedish University of Agricultural Sciences \\
+{$submitplace$}\\
 Print: SLU Service/Repro, $printplace$ $submityear$
 \vspace{-1cm}}
 
@@ -519,11 +527,11 @@ Print: SLU Service/Repro, $printplace$ $submityear$
     {\noindent $abstract$}
     
     \vspace{.1cm}
-    \noindent\emph{Keywords: }{$keywords$}
+    \noindent Keywords: {$keywords$}
     
     \vspace{.2cm}
-    \noindent\emph{Author's address: }{$author$, SLU, $address$}\\
-    \noindent\emph{E-mail: }{$email$}
+    \noindent Author's address: {$author$, SLU, $address$}\\
+    \noindent Department of {$department$, $submitplace$, Sweden}
 
     \end{small}
     {\vfill}
@@ -545,11 +553,11 @@ Print: SLU Service/Repro, $printplace$ $submityear$
     {\noindent $swedishabstract$}
     
     \vspace{.1cm}
-    \noindent\emph{Nyckelord: }{$nyckelord$}
+    \noindent Nyckelord: {$nyckelord$}
     
     \vspace{.2cm}
-    \noindent\emph{Författarens address: }{$author$, SLU, $address$}\\
-    \noindent\emph{E-post: }{$email$}
+    \noindent Författarens address: {$author$, SLU, $address$}\\
+    \noindent $swedepartment$, $submitplace$, Sverige
     \end{small}
     {\vfill}
     \newpage
