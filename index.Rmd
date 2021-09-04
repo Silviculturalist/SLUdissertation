@@ -39,7 +39,7 @@ output:
     includes:
       in_header: "preamble.tex"
     template: template.tex
-font-family: helvet
+font-family: Times New Roman
 ---
 
 # Prerequisites
