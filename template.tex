@@ -458,17 +458,33 @@ $endif$
 %caption alignment left
 \usepackage[justification=raggedright,labelfont=bf,singlelinecheck=false]{caption} 
 
-%toc formatting
-\usepackage{titlesec}
 
+%toc formatting
+\usepackage{tocloft} % fiddle with the ToC
+\renewcommand{\cftchapdotsep}{\cftdotsep} % use dotted leader for chapters
+
+\usepackage{titlesec}
+%Removes Chapter numbering
 \titleformat{\chapter}
-  {\Large\bfseries} % format
+%  {\Large\bfseries} % format
+  {\Large\bfseries\usefont{T1}{phv}{m}{n}} % format using Helvetica
   {}                % label
   {0pt}             % sep
   {\huge}           % before-code
 
+%Peter Wilson addition for Helvetica TOC 
+\usepackage{comment}
+\begin{comment}
+% this produces an error
+\titleformat{\chapter*}
+%  {\Large\bfseries} % format
+  {\Large\bfseries\usefont{T1}{phv}{m}{n}} % format
+  {}                % label
+  {0pt}             % sep
+  {\huge}           % before-code
+\end{comment}
 
-
+%\usepackage{mathptmx} % times font
 
 \begin{document}
 
@@ -484,9 +500,11 @@ $endif$
     \vspace{1cm}
     \begin{center}
             {\Large{\usefont{T1}{phv}{b}{n}$author$}}\\
-            {\large Faculty of \expandafter{$faculty$},\\
+            {\large 
+             {\usefont{T1}{phv}{m}{n} Faculty of \expandafter{$faculty$},\\
              \large Department of \expandafter{$department$}\\
              {$submitplace$}
+             }
            }
 
     \end{center}
@@ -599,7 +617,8 @@ Print: SLU Service/Repro, $printplace$ $submityear$
 
   	\noindent 
   	{\usefont{T1}{phv}{m}{n} $dedication$}
-	\newpage
+\newpage
+\normalfont
 
 	
 $for(include-before)$
